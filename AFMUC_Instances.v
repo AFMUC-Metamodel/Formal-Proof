@@ -34,7 +34,7 @@ Definition UC1_basicFlow : list SeqString :=
   ].
 Definition UC1_postcondition : list SeqString :=
   [ {| seq_num := 1; value := "The customer is registered." |};
-    {| seq_num := 1; value := "The customer DATA is stored in the database with unique identifier." |}
+    {| seq_num := 2; value := "The customer DATA is stored in the database with unique identifier." |}
   ].
 (* use case 2: make reservation*)
 Definition UC2_precondition :  list SeqString :=
@@ -57,10 +57,117 @@ Definition UC2_basicflow : list SeqString :=
     {| seq_num := 12; value := "The customer confirms the rental." |};
     {| seq_num := 13; value := "The system creates a rental agreement." |}
   ].
+
 Definition UC2_postcondition : list SeqString :=
   [ {| seq_num := 1; value := "Rental agreement is generated." |};
-    {| seq_num := 1; value := "The customer reservation DATA is stored in the database. " |};
-    {| seq_num := 1; value := "The customer downloads the agreement" |}
+    {| seq_num := 2; value := "The customer reservation DATA is stored in the database. " |};
+    {| seq_num := 3; value := "The customer downloads the agreement" |}
+  ].
+(* use case 3: join loyalty scheme*)
+Definition UC3_precondition :  list SeqString :=
+  [ {| seq_num := 1; value := "The customer is registered in the system." |};
+    {| seq_num := 2; value := "The customer initiates the join loyalty incentive scheme URL." |};
+    {| seq_num := 3; value := "	The customer has network connection."|}
+  ].
+Definition UC3_basicflow : list SeqString :=
+  [ {| seq_num := 1; value := "The customer enters customer ID in the system." |};
+    {| seq_num := 2; value := "The system VALIDATES THAT the customer is not already a member of the scheme. " |};
+    {| seq_num := 3; value := "The system VALIDATES THAT the customer has made 4 rentals within a year." |};
+    {| seq_num := 4; value := "The system VALIDATES THAT the customer is qualified as a good experience. " |};
+    {| seq_num := 5; value := "The customer accepts the membership." |};
+    {| seq_num := 6; value := "The system changes the membership status of the customer." |};
+    {| seq_num := 7; value := "The system accumulates the point for last 4 rentals to the customer." |}
+  ].
+Definition UC3_postcondition : list SeqString :=
+  [ {| seq_num := 1; value := "The customer become a member of loyalty incentive scheme. " |};
+    {| seq_num := 2; value := "The customer DATA is updated in the database with membership status. " |};
+    {| seq_num := 3; value := "The customer DATA is updated with the total earned points in the database." |}
+  ].
+
+(* use case 4: cancel reservation*)
+Definition UC4_precondition :  list SeqString :=
+  [ {| seq_num := 1; value := "Rental agreement is already generated." |};
+    {| seq_num := 2; value := "The customer initiates the cancel reservation URL." |};
+    {| seq_num := 3; value := "	The customer is registered in the system."|};
+    {| seq_num := 4; value := "	The customer has network connection."|}
+  ].
+Definition UC4_basicflow : list SeqString :=
+  [ {| seq_num := 1; value := "The customer enters customer ID in the system." |};
+    {| seq_num := 2; value := "The customer selects the beginning date of reservation." |};
+    {| seq_num := 3; value := "The system VALIDATES THAT the reservation exists." |};
+    {| seq_num := 4; value := "The system VALIDATES THAT the reservation is in progress." |};
+    {| seq_num := 5; value := "The customer confirms the cancellation of reservation." |};
+    {| seq_num := 6; value := "The system VALIDATES THAT IF pickup day of rental is today THEN charging one day rental to the customer. " |};
+    {| seq_num := 7; value := "The system updates the reservation with cancellation details." |}
+  ].
+Definition UC4_postcondition : list SeqString :=
+  [ {| seq_num := 1; value := "The customer reservation status is updated with cancel in database " |};
+    {| seq_num := 2; value := "The Rental agreement is cancelled. " |}
+  ].
+
+(* use case 5: extend rental agreement*)
+Definition UC5_precondition :  list SeqString :=
+  [ {| seq_num := 1; value := "Rental agreement is already generated." |};
+    {| seq_num := 2; value := "The customer initiates the extend rental agreement URL." |};
+    {| seq_num := 3; value := "	The customer is registered in the system."|};
+    {| seq_num := 4; value := "	The customer has network connection."|}
+  ].
+Definition UC5_basicflow : list SeqString :=
+  [ {| seq_num := 1; value := "The customer enters customer ID in the system." |};
+    {| seq_num := 2; value := "The customer selects the current rental agreement. " |};
+    {| seq_num := 3; value := "The system VALIDTAED THAT no maintenance of car is required." |};
+    {| seq_num := 4; value := "The system VALIDATES THAT extension is possible. " |};
+    {| seq_num := 5; value := "The customer confirms the rental changes." |};
+    {| seq_num := 6; value := "The system updates the rental agreement." |}
+  ].
+Definition UC5_postcondition : list SeqString :=
+  [ {| seq_num := 1; value := "Rental agreement is extended." |};
+    {| seq_num := 2; value := "The customer reservation DATA is update in database with extended date. " |}
+  ].
+
+(* use case 6: Return car*)
+Definition UC6_precondition :  list SeqString :=
+  [ {| seq_num := 1; value := "The customer initiates the return car URL." |};
+    {| seq_num := 2; value := "The customer is registered in the system." |};
+    {| seq_num := 3; value := "Rental agreement is already generated."|};
+    {| seq_num := 4; value := "The customer has network connection."|}
+  ].
+Definition UC6_basicflow : list SeqString :=
+  [ {| seq_num := 1; value := "The customer enters customer ID in the system." |};
+    {| seq_num := 2; value := "The customer selects the beginning date of rental. " |};
+    {| seq_num := 3; value := "The system VALIDATES THAT IF the rental exists THEN stores actual time as return time." |};
+    {| seq_num := 4; value := "The system VALIDATES THAT the car is returned to agreed drop-off branch." |};
+    {| seq_num := 5; value := "The system VALIDATES THAT the car is returned on time." |};
+    {| seq_num := 6; value := "The system calculates the basic cost of the rental up to the duration according to car group." |};
+    {| seq_num := 7; value := "The system initiates INCLUDED USE CASE calculate best price." |};
+    {| seq_num := 8; value := "IF car damages are found in car, THEN system initiates the EXTENDED BY USE CASE cancel all reservations." |};
+    {| seq_num := 9; value := "TThe system shows the total cost to the customer." |};
+    {| seq_num := 10; value := "The customer enters the credit card number to pay the rental to the system." |};
+    {| seq_num := 11; value := "The system shows the thankyou message to the customer." |}
+].
+Definition UC6_postcondition : list SeqString :=
+  [ {| seq_num := 1; value := "The system updates the car return status in database." |};
+    {| seq_num := 2; value := "The system updates the car maintenance details in the database. " |};
+    {| seq_num := 3; value := "The system updates the customer experience in the database. " |}
+  ].
+
+(* use case 7: Cancel Membership*)
+Definition UC7_precondition :  list SeqString :=
+  [ {| seq_num := 1; value := "The customer initiates the cancel membership URL." |};
+    {| seq_num := 2; value := "The customer is registered in the system." |};
+    {| seq_num := 3; value := "The customer is a member of loyalty incentive scheme."|};
+    {| seq_num := 4; value := "The customer has network connection."|}
+  ].
+Definition UC7_basicflow : list SeqString :=
+  [ {| seq_num := 1; value := "The customer enters customer ID in the system." |};
+    {| seq_num := 2; value := "The customer cancels the membership. " |};
+    {| seq_num := 3; value := "The system changes the membership status of the customer." |};
+    {| seq_num := 4; value := "The system removes the points of the customer." |}
+  ].
+Definition UC7_postcondition : list SeqString :=
+  [ {| seq_num := 1; value := "Membership is cancelled.  " |};
+    {| seq_num := 2; value := "All existing offer points or special advantages are discarded from database." |};
+    {| seq_num := 3; value := "The customer membership status is updated in database." |}
   ].
 (*/////////////////////////use case description instances/////////////////////////*)
 
@@ -79,6 +186,46 @@ Definition UC2: UsecaseModule.Usecase :={|
   UsecaseModule.precondition := UC2_precondition;
   UsecaseModule.basicFlow:= UC2_basicflow; 
   UsecaseModule.postcondition:= UC1_postcondition;
+|}.
+(* Use case 3: Join loyalty scheme*)
+Definition UC3: UsecaseModule.Usecase :={|
+  UsecaseModule.uc_name  := "join loyalty scheme";
+  UsecaseModule.dependency := [];
+  UsecaseModule.precondition := UC3_precondition;
+  UsecaseModule.basicFlow:= UC3_basicflow;
+  UsecaseModule.postcondition:= UC3_postcondition;
+|}.
+(* Use case 4: cancel reservation*)
+Definition UC4: UsecaseModule.Usecase :={|
+  UsecaseModule.uc_name  := " cancel reservation ";
+  UsecaseModule.dependency := [];
+  UsecaseModule.precondition := UC4_precondition;
+  UsecaseModule.basicFlow:= UC4_basicflow; 
+  UsecaseModule.postcondition:= UC4_postcondition;
+|}.
+(* Use case 5: extend rental agreement*)
+Definition UC5: UsecaseModule.Usecase :={|
+  UsecaseModule.uc_name  := "extend rental agreement";
+  UsecaseModule.dependency := [];
+  UsecaseModule.precondition := UC5_precondition;
+  UsecaseModule.basicFlow:= UC5_basicflow;
+  UsecaseModule.postcondition:= UC5_postcondition;
+|}.
+(* Use case 6: return car*)
+Definition UC6: UsecaseModule.Usecase :={|
+  UsecaseModule.uc_name  := "return car";
+  UsecaseModule.dependency := ["INCLUDED USE CASE CALCULATE BEST PRICE ";"INCLUDED USE CASE CANCEL ALL RESERVATIONS"];
+  UsecaseModule.precondition := UC6_precondition;
+  UsecaseModule.basicFlow:= UC6_basicflow; 
+  UsecaseModule.postcondition:= UC6_postcondition;
+|}.
+(* Use case 7: cancel membership*)
+Definition UC7: UsecaseModule.Usecase :={|
+  UsecaseModule.uc_name  := "cancel membership";
+  UsecaseModule.dependency := [];
+  UsecaseModule.precondition := UC7_precondition;
+  UsecaseModule.basicFlow:= UC7_basicflow; 
+  UsecaseModule.postcondition:= UC7_postcondition;
 |}.
 
 (***************************************************************************)
@@ -236,30 +383,64 @@ Definition Pointcut2: Pointcut:={|
   pointcut_element:= fun uc => get_usecase_attribute uc "basicFlow"; 
   selection_constraint:= fun seq_str => match_constraint "customer enters" seq_str
 |}.
-(* Precondition*)
 Definition Pointcut3: Pointcut:={|
+  pointcut_name:="join loyalty scheme";
+  pointcut_element:= fun uc => get_usecase_attribute uc "basicFlow"; 
+  selection_constraint:= fun seq_str => match_constraint "customer enters" seq_str
+|}.
+(*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*)
+(* Precondition*)
+Definition Pointcut4: Pointcut:={|
   pointcut_name:="register customer";
   pointcut_element:= fun uc => get_usecase_attribute uc "precondition"; 
   selection_constraint:= fun seq_str => match_constraint "initiates the registration URL." seq_str
 |}.
 
-Definition Pointcut4: Pointcut:={|
+Definition Pointcut5: Pointcut:={|
   pointcut_name:="make reservation";
   pointcut_element:= fun uc => get_usecase_attribute uc "precondition"; 
   selection_constraint:= fun seq_str => match_constraint "initiates the make reservation URL" seq_str
 |}.
-(* Postcondition*)
-Definition Pointcut5:Pointcut:={|
-  pointcut_name:="register customer";
-  pointcut_element:= fun uc => get_usecase_attribute uc "postcondition"; 
-  selection_constraint:= fun seq_str => match_constraint "DATA is stored" seq_str
-|}. 
 
 Definition Pointcut6: Pointcut:={|
+  pointcut_name:="join loyalty scheme";
+  pointcut_element:= fun uc => get_usecase_attribute uc "precondition"; 
+  selection_constraint:= fun seq_str => match_constraint "initiates the join loyalty" seq_str
+|}.
+
+Definition Pointcut7: Pointcut:={|
+  pointcut_name:="return car";
+  pointcut_element:= fun uc => get_usecase_attribute uc "precondition"; 
+  selection_constraint:= fun seq_str => match_constraint "initiates the return car URL" seq_str
+|}.
+
+(*************************************************)
+
+
+(* Postcondition*)
+Definition Pointcut8:Pointcut:={|
   pointcut_name:="make reservation";
   pointcut_element:= fun uc => get_usecase_attribute uc "postcondition"; 
-  selection_constraint:= fun seq_str => match_constraint "DATA is stored" seq_str
+  selection_constraint:= fun seq_str => match_constraint "data" seq_str
+|}. 
+
+Definition Pointcut9: Pointcut:={|
+  pointcut_name:="cancel membership";
+  pointcut_element:= fun uc => get_usecase_attribute uc "postcondition"; 
+  selection_constraint:= fun seq_str => match_constraint "data" seq_str
 |}.
+Definition Pointcut10:Pointcut:={|
+  pointcut_name:="extend rental agreement";
+  pointcut_element:= fun uc => get_usecase_attribute uc "postcondition"; 
+  selection_constraint:= fun seq_str => match_constraint "data" seq_str
+|}. 
+
+Definition Pointcut11: Pointcut:={|
+  pointcut_name:="return car";
+  pointcut_element:= fun uc => get_usecase_attribute uc "postcondition"; 
+  selection_constraint:= fun seq_str => match_constraint "data" seq_str
+|}.
+
 
 (*****************************************************************************)
 
@@ -280,28 +461,61 @@ Definition Joinpoint2 : Joinpoint :=
   |}.
 
 Definition Joinpoint3 : Joinpoint :=
-  let jp := apply_pointcut Pointcut3 UC1 in
+  let jp := apply_pointcut Pointcut3 UC3 in
   {|
     selected_joinpoints := jp.(selected_joinpoints);  
     source_info := jp.(source_info)                  
   |}.
 
 Definition Joinpoint4 : Joinpoint :=
-  let jp := apply_pointcut Pointcut4 UC2 in
+  let jp := apply_pointcut Pointcut4 UC1 in
   {|
     selected_joinpoints := jp.(selected_joinpoints);  
     source_info := jp.(source_info)                   
   |}.
 
 Definition Joinpoint5 : Joinpoint :=
-  let jp := apply_pointcut Pointcut5 UC1 in
+  let jp := apply_pointcut Pointcut5 UC2 in
   {|
     selected_joinpoints := jp.(selected_joinpoints);  
     source_info := jp.(source_info)                   
   |}.
 
 Definition Joinpoint6 : Joinpoint :=
-  let jp := apply_pointcut Pointcut6 UC2 in
+  let jp := apply_pointcut Pointcut6 UC3 in
+  {|
+    selected_joinpoints := jp.(selected_joinpoints);  
+    source_info := jp.(source_info)                   
+  |}.
+Definition Joinpoint7 : Joinpoint :=
+  let jp := apply_pointcut Pointcut7 UC6 in
+  {|
+    selected_joinpoints := jp.(selected_joinpoints);  
+    source_info := jp.(source_info)                  
+  |}.
+
+Definition Joinpoint8 : Joinpoint :=
+  let jp := apply_pointcut Pointcut8 UC2 in
+  {|
+    selected_joinpoints := jp.(selected_joinpoints);  
+    source_info := jp.(source_info)                   
+  |}.
+
+Definition Joinpoint9 : Joinpoint :=
+  let jp := apply_pointcut Pointcut9 UC7 in
+  {|
+    selected_joinpoints := jp.(selected_joinpoints);  
+    source_info := jp.(source_info)                   
+  |}.
+
+Definition Joinpoint10 : Joinpoint :=
+  let jp := apply_pointcut Pointcut6 UC5 in
+  {|
+    selected_joinpoints := jp.(selected_joinpoints);  
+    source_info := jp.(source_info)                   
+  |}.
+Definition Joinpoint11 : Joinpoint :=
+  let jp := apply_pointcut Pointcut11 UC6 in
   {|
     selected_joinpoints := jp.(selected_joinpoints);  
     source_info := jp.(source_info)                   
@@ -310,6 +524,7 @@ Definition Joinpoint6 : Joinpoint :=
 (*****************************************************************************)
 
 (*/////////////Advice instance\\\\\\\\\\\\\\\\\\*)
+(*ASPECT 1: GET UNAUTHORIZED ACCESS*)
 
 Definition advice1 : Advice :=
   let adv := apply_advice Joinpoint1 aspect1 in
@@ -328,13 +543,16 @@ Definition advice2 : Advice :=
     target_joinpoints := adv.(target_joinpoints)
   |}.
 Definition advice3 : Advice :=
-  let adv := apply_advice Joinpoint3 aspect2 in
+  let adv := apply_advice Joinpoint3 aspect1 in
   {| 
     advice_type := adv.(advice_type);
     threat_aspect := adv.(threat_aspect);
     advice_behaviour := adv.(advice_behaviour);
     target_joinpoints := adv.(target_joinpoints)
   |}.
+
+(*ASPECT 2: INTERCEPT COMMUNICATION*)
+
 Definition advice4 : Advice :=
   let adv := apply_advice Joinpoint4 aspect2 in
   {| 
@@ -344,7 +562,7 @@ Definition advice4 : Advice :=
     target_joinpoints := adv.(target_joinpoints)
   |}.
 Definition advice5 : Advice :=
-  let adv := apply_advice Joinpoint5 aspect3 in
+  let adv := apply_advice Joinpoint5 aspect2 in
   {| 
     advice_type := adv.(advice_type);
     threat_aspect := adv.(threat_aspect);
@@ -352,7 +570,49 @@ Definition advice5 : Advice :=
     target_joinpoints := adv.(target_joinpoints)
   |}.
 Definition advice6 : Advice :=
-  let adv := apply_advice Joinpoint6 aspect3 in
+  let adv := apply_advice Joinpoint6 aspect2 in
+  {| 
+    advice_type := adv.(advice_type);
+    threat_aspect := adv.(threat_aspect);
+    advice_behaviour := adv.(advice_behaviour);
+    target_joinpoints := adv.(target_joinpoints)
+  |}.
+Definition advice7 : Advice :=
+  let adv := apply_advice Joinpoint7 aspect2 in
+  {| 
+    advice_type := adv.(advice_type);
+    threat_aspect := adv.(threat_aspect);
+    advice_behaviour := adv.(advice_behaviour);
+    target_joinpoints := adv.(target_joinpoints)
+  |}.
+(***************************************************************************)
+(*ASPECT 3: MODIFY DATA*)
+Definition advice8 : Advice :=
+  let adv := apply_advice Joinpoint8 aspect3 in
+  {| 
+    advice_type := adv.(advice_type);
+    threat_aspect := adv.(threat_aspect);
+    advice_behaviour := adv.(advice_behaviour);
+    target_joinpoints := adv.(target_joinpoints)
+  |}.
+Definition advice9 : Advice :=
+  let adv := apply_advice Joinpoint9 aspect3 in
+  {| 
+    advice_type := adv.(advice_type);
+    threat_aspect := adv.(threat_aspect);
+    advice_behaviour := adv.(advice_behaviour);
+    target_joinpoints := adv.(target_joinpoints)
+  |}.
+Definition advice10 : Advice :=
+  let adv := apply_advice Joinpoint10 aspect3 in
+  {| 
+    advice_type := adv.(advice_type);
+    threat_aspect := adv.(threat_aspect);
+    advice_behaviour := adv.(advice_behaviour);
+    target_joinpoints := adv.(target_joinpoints)
+  |}.
+Definition advice11 : Advice :=
+  let adv := apply_advice Joinpoint11 aspect3 in
   {| 
     advice_type := adv.(advice_type);
     threat_aspect := adv.(threat_aspect);
@@ -360,13 +620,14 @@ Definition advice6 : Advice :=
     target_joinpoints := adv.(target_joinpoints)
   |}.
 
+
 (*****************************************************************************)
 
 (*/////////////Introduction instance\\\\\\\\\\\\\\\\\\*)
 (* Create a sample introduction *)
 
 (* Define a list containing the use cases *)
-Definition usecaseslist := [UC1; UC2].
+
 (* Example introduction instance *) 
 
 (*/////////////Introduction instance (REPLACE) \\\\\\\\\\\\\\\\\\*)
@@ -382,7 +643,7 @@ Definition intro1 := {|
 (*****************************************************************************)
 
 (*/////////////Introduction instance (ASSOCIATE DEPENDENCY) \\\\\\\\\\\\\\\\\\*)
-
+Definition usecaseslist := [UC1; UC2; UC3; UC7].
 (* Example instance with a specific introduced_AS function *)
 Definition intro2 := {|
   introduction_name := "Create Malicious Ads";
@@ -397,7 +658,6 @@ Definition intro3 := {|
   replace := default_replace; (* Use default_replace as a placeholder function *)
   introduced_AS := fun threat usecases => associate_threat_with_usecase "EXTENDED BY USECASE" threat usecases;
 |}.
-
 (*****************************************************************************)
 
                                   (* ************* THE END**************** *)
