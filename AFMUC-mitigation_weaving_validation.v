@@ -15,7 +15,7 @@ Lemma weaving_correct :
                 (pointcut_name pc, "selection constraint applied")
                 (selected_joinpoints (apply_pointcut pc muc), source_info (apply_pointcut pc muc))
                 (match source_info (apply_pointcut pc muc) with
-                   | "BasicthreatFlow" => Around
+                   | "Basic Threat Flow" => Around
                    | "Precondition" => Before
                    | "Postcondition" => After
                    | _ => Unknown
@@ -30,7 +30,7 @@ Proof.
             (pointcut_name pc, "selection constraint applied")
             (selected_joinpoints (apply_pointcut pc muc), source_info (apply_pointcut pc muc))
             (match source_info (apply_pointcut pc muc) with
-               | "BasicthreatFlow" => Around
+               | "Basic Threat Flow" => Around
                | "Precondition" => Before
                | "Postcondition" => After
                | _ => Unknown
@@ -39,10 +39,35 @@ Proof.
             aspect.(AspectMitigationModule.precondition)
             aspect.(AspectMitigationModule.postcondition)).
   reflexivity.
-Qed. 
-
-Definition wovenAFMUC := weave_all [ Pointcut1; Pointcut2] [aspect1; aspect2] AspectMC1. 
+Qed.    
+Definition wovenAFMUC := weave_all [Pointcut1] [aspect1] AspectMC1. 
 Compute wovenAFMUC.
+
+Definition wovenAFMUC1 := weave_all [Pointcut4] [aspect1] AspectMC2. 
+Compute wovenAFMUC.
+
+Definition wovenAFMUC2 := weave_all [Pointcut5] [aspect2] AspectMC3. 
+Compute wovenAFMUC.
+ 
+Definition wovenAFMUC3 := weave_all [Pointcut6] [aspect2] AspectMC3. 
+Compute wovenAFMUC.
+
+Definition wovenAFMUC4 := weave_all [Pointcut7] [aspect2] AspectMC3. 
+Compute wovenAFMUC.
+
+Definition wovenAFMUC5 := weave_all [Pointcut8] [aspect2] AspectMC3. 
+Compute wovenAFMUC.
+
+Definition wovenAFMUC6 := weave_all [Pointcut9] [aspect2] AspectMC3. 
+Compute wovenAFMUC.
+
+ Definition wovenAFMUC7 := weave_all [ Pointcut3] [aspect3] AspectMC2. 
+Compute wovenAFMUC.
+
+
+Definition wovenAFMUC8 := weave_all [ Pointcut5; Pointcut6; Pointcut7; Pointcut8;Pointcut9] [aspect2] AspectMC3. 
+Compute wovenAFMUC.
+
 
 (*
 (* instance Verification*)
