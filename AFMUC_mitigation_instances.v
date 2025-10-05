@@ -244,7 +244,7 @@ Definition Pointcut1: Pointcut:={|
   pointcut_name:="Get unauthorized access via SQLi";
   pointcut_element:= fun muc => get_misusecase_attribute muc "basicthreatFlow"; (* Changed to return list of SeqString *)
   selection_constraint:= fun seq_str =>
-    match_constraint "PROVIDES SQLI VALUES IN" seq_str
+    match_constraint "SQLI VALUES IN" seq_str
 |}.
 
 (* Precondition-----encrypt data*)
@@ -259,7 +259,7 @@ Definition Pointcut3: Pointcut:={|
   pointcut_name:="intercept communication via SSL stripping ";
   pointcut_element:= fun muc => get_misusecase_attribute muc "basicthreatFlow"; (* Changed to return list of SeqString *)
 selection_constraint:= fun seq_str =>
-    match_constraint "customer SEND sensitive DATA" seq_str
+    match_constraint "customer SEND " seq_str
 |}.
 (*precondition-----encrypt data*)
 Definition Pointcut4: Pointcut:={|
@@ -343,26 +343,7 @@ Definition Joinpoint9 : Joinpoint :=
 
 
 (*/////////////Advice instance\\\\\\\\\\\\\\\\\\*)
-(*
-Definition advice1 : Advice :=
-  apply_advice Joinpoint1 AspectMC1.
-Definition advice2 : Advice :=
-  apply_advice Joinpoint2 AspectMC2.
-Definition advice3 : Advice :=
-  apply_advice Joinpoint3 AspectMC2.
-Definition advice4 : Advice :=
-  apply_advice Joinpoint4 AspectMC2.
-Definition advice5 : Advice :=
-  apply_advice Joinpoint5 AspectMC3.
-Definition advice6 : Advice :=
-  apply_advice Joinpoint6 AspectMC3.
-Definition advice7 : Advice :=
-  apply_advice Joinpoint7 AspectMC3.
-Definition advice8 : Advice :=
-  apply_advice Joinpoint8 AspectMC3.
-Definition advice9 : Advice :=
-  apply_advice Joinpoint9 AspectMC3.
-*)
+
 Definition advice1 : Advice :=
   let adv := apply_advice Joinpoint1 AspectMC1 in
   {| 
