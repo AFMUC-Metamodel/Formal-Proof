@@ -52,14 +52,3 @@ Fixpoint weave_all (pcs : list Pointcut) (mucs : list AspectMisUsecaseModule.Thr
   | pc :: pcs', muc :: mucs' => weaving pc muc aspect :: weave_all pcs' mucs' aspect
   | _, _ => nil
   end.
-
-
-
-
-
-
-
-
-
-
-
