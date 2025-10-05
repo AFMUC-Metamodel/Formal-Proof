@@ -105,11 +105,11 @@ Proof.
   intros threat usecases.
   unfold default_introduced_AS.
   reflexivity.
-Qed.
+Qed. 
 
 (*******************Helper function proof*******************)
 
-(*Lemma replace_usecase_correct:
+Lemma replace_usecase_correct:
   forall (threat: AspectMisUsecaseModule.Threat) (usecases: list UsecaseModule.Usecase),
     forall uc, In uc usecases ->
     (replace_usecase threat usecases) = 
@@ -124,7 +124,7 @@ Qed.
 Proof.
   intros threat usecases uc H. 
   simpl. reflexivity.
-Qed.*)
+Qed.
 
 (*>>>>>>>>>>>>>>>>>>Main Function Proof (INTRODUCED THREAT REPLACED THE USE CASE)>>>>>>>>>>>>>>>>>>>>>>>>>>*)
 Lemma introduce_threat_correct:
@@ -161,7 +161,7 @@ Proof.
   intros association threat usecases assoc_usecases uc H_in.
   unfold associate_threat_with_usecase in *.
   induction usecases as [|uc' usecases' IH].
-  - simpl in H_in. contradiction. 
+  - simpl in H_in. contradiction.  
   - simpl in H_in.
     destruct H_in as [H_eq | H_in_tail].
     + subst uc'.
@@ -188,21 +188,4 @@ Proof.
 Qed.  
 
 
-
-
-
-
-
-
-                                (* ************* THE END**************** *)
-
-
-
-
-
-
-
-
-
-
-
+                               (* ************* THE END**************** *)
