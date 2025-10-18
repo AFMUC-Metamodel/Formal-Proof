@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_CE34IEnTEfC279R9I1w9cg" name="aspectmitigation" metaclassReference="_K8hG4EnWEfC279R9I1w9cg _MyzTEEnWEfC279R9I1w9cg">
+  <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T69zIUnXEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bMBl8UnXEfC279R9I1w9cg" source="PapyrusVersion">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bMBl8knXEfC279R9I1w9cg" key="Version" value="0.0.0"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bMBl80nXEfC279R9I1w9cg" key="Comment" value="&lt;undefined>"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bMBl9EnXEfC279R9I1w9cg" key="Copyright" value=""/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bMBl9UnXEfC279R9I1w9cg" key="Date" value=""/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bMBl9knXEfC279R9I1w9cg" key="Author" value="&lt;undefined>"/>
+    </eAnnotations>
+    <contents xmi:type="ecore:EPackage" xmi:id="_puiuQVWKEfC279R9I1w9cg" name="aspectmitigation" nsURI="http:///schemas/aspectmitigation/_puiuQFWKEfC279R9I1w9cg/1" nsPrefix="aspectmitigation">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puiui1WKEfC279R9I1w9cg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_puiujFWKEfC279R9I1w9cg" key="Version" value="0.0.2"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_puiujVWKEfC279R9I1w9cg" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_puiujlWKEfC279R9I1w9cg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_puiuj1WKEfC279R9I1w9cg" key="Date" value="2025-06-30"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_puiukFWKEfC279R9I1w9cg" key="Author" value="shumaila"/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_puiuQlWKEfC279R9I1w9cg" name="AspectMitigationcase">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puiuQ1WKEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_EqZv8EnTEfC279R9I1w9cg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_puiuRFWKEfC279R9I1w9cg" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_puiuRlWKEfC279R9I1w9cg" name="Mitigates">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puiuR1WKEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_lEk8QEnTEfC279R9I1w9cg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_puiuSFWKEfC279R9I1w9cg" name="base_Dependency" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Dependency"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_puiuSlWKEfC279R9I1w9cg" name="AspectMitigation_Description">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puiuS1WKEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_wf_2sEnTEfC279R9I1w9cg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_puiuTFWKEfC279R9I1w9cg" name="mitigation_name" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_puiuTlWKEfC279R9I1w9cg" name="precondition" ordered="false" lowerBound="1" upperBound="-1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_puiuUFWKEfC279R9I1w9cg" name="basicmitigationFlow" ordered="false" lowerBound="1" upperBound="-1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_puiuUlWKEfC279R9I1w9cg" name="postcondition" ordered="false" lowerBound="1" upperBound="-1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_puiuVFWKEfC279R9I1w9cg" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_puiuVlWKEfC279R9I1w9cg" name="Pointcut">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puiuV1WKEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_yx0IUEnTEfC279R9I1w9cg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_puiuWFWKEfC279R9I1w9cg" name="pointcut_name" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_puiuWlWKEfC279R9I1w9cg" name="pointcut_element" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_puiuXFWKEfC279R9I1w9cg" name="selection_constraint" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_puiuXlWKEfC279R9I1w9cg" name="Joinpoint">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puiuX1WKEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_0K-6sEnTEfC279R9I1w9cg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_puiuYFWKEfC279R9I1w9cg" name="selected_joinpoints" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_puiuYlWKEfC279R9I1w9cg" name="source" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_puiuZFWKEfC279R9I1w9cg" name="Advice">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puiuZVWKEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_05oJYEnTEfC279R9I1w9cg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_puiuZlWKEfC279R9I1w9cg" name="advice_type" ordered="false" lowerBound="1" upperBound="3" eType="_puiualWKEfC279R9I1w9cg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_puiuaFWKEfC279R9I1w9cg" name="advice_behaviour" ordered="false" lowerBound="1" eType="_puiuQlWKEfC279R9I1w9cg"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EEnum" xmi:id="_puiualWKEfC279R9I1w9cg" name="Advice_Type">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puiua1WKEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_2ae4IEnTEfC279R9I1w9cg"/>
+        <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_puiubFWKEfC279R9I1w9cg" name="Before"/>
+        <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_puiubVWKEfC279R9I1w9cg" name="Around" value="1"/>
+        <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_puiublWKEfC279R9I1w9cg" name="After" value="2"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_puiub1WKEfC279R9I1w9cg" name="Aspect_Misusecase_Description">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puiucFWKEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_smcq4EnWEfC279R9I1w9cg"/>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puiucVWKEfC279R9I1w9cg" source="duplicates">
+          <contents xmi:type="ecore:EReference" xmi:id="_puiuclWKEfC279R9I1w9cg" name="base_UseCase" ordered="false">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puiuc1WKEfC279R9I1w9cg" source="redefines" references="_puiufVWKEfC279R9I1w9cg"/>
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+          </contents>
+        </eAnnotations>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_puiudVWKEfC279R9I1w9cg" name="aspectmuc_name" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_puiud1WKEfC279R9I1w9cg" name="precondition" ordered="false" lowerBound="1" upperBound="-1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_puiueVWKEfC279R9I1w9cg" name="basicthreatFlow" ordered="false" lowerBound="1" upperBound="-1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_puiue1WKEfC279R9I1w9cg" name="postcondition" ordered="false" lowerBound="1" upperBound="-1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_puiufVWKEfC279R9I1w9cg" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_puiuf1WKEfC279R9I1w9cg" name="Usecase">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puiugFWKEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_181p8EwwEfC279R9I1w9cg"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_puiugVWKEfC279R9I1w9cg" name="AspectMisusecase">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_puiuglWKEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_637OcEwxEfC279R9I1w9cg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_puiug1WKEfC279R9I1w9cg" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_T69zIknXEfC279R9I1w9cg" name="aspectmitigation" nsURI="http:///schemas/aspectmitigation/_T69zIEnXEfC279R9I1w9cg/0" nsPrefix="aspectmitigation">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T69zXEnXEfC279R9I1w9cg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T69zXUnXEfC279R9I1w9cg" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T69zXknXEfC279R9I1w9cg" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T69zX0nXEfC279R9I1w9cg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T69zYEnXEfC279R9I1w9cg" key="Date" value="2025-06-15"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T69zYUnXEfC279R9I1w9cg" key="Author" value="shumaila"/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_T69zI0nXEfC279R9I1w9cg" name="AspectMitigationcase">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T69zJEnXEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_EqZv8EnTEfC279R9I1w9cg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_T69zJUnXEfC279R9I1w9cg" name="baseMisusecase" ordered="false" lowerBound="1" upperBound="-1" eType="_T69zVknXEfC279R9I1w9cg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_T69zJ0nXEfC279R9I1w9cg" name="base_UseCase" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//UseCase"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_T69zKUnXEfC279R9I1w9cg" name="Mitigates">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T69zKknXEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_lEk8QEnTEfC279R9I1w9cg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_T69zK0nXEfC279R9I1w9cg" name="base_Dependency" ordered="false">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Dependency"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_T69zLUnXEfC279R9I1w9cg" name="Mitigation_Description">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T69zLknXEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_wf_2sEnTEfC279R9I1w9cg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_T69zL0nXEfC279R9I1w9cg" name="mitigation_name" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_T69zMUnXEfC279R9I1w9cg" name="precondition" ordered="false" lowerBound="1" upperBound="-1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_T69zM0nXEfC279R9I1w9cg" name="basicmitigationFlow" ordered="false" lowerBound="1" upperBound="-1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_T69zNUnXEfC279R9I1w9cg" name="postcondition" ordered="false" lowerBound="1" upperBound="-1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_T69zN0nXEfC279R9I1w9cg" name="Pointcut">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T69zOEnXEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_yx0IUEnTEfC279R9I1w9cg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_T69zOUnXEfC279R9I1w9cg" name="pointcut_name" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_T69zO0nXEfC279R9I1w9cg" name="pointcut_element" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_T69zPUnXEfC279R9I1w9cg" name="selection_constraint" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_T69zP0nXEfC279R9I1w9cg" name="Joinpoint">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T69zQEnXEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_0K-6sEnTEfC279R9I1w9cg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_T69zQUnXEfC279R9I1w9cg" name="selected_joinpoints" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_T69zQ0nXEfC279R9I1w9cg" name="source" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_T69zRUnXEfC279R9I1w9cg" name="Advice">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T69zRknXEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_05oJYEnTEfC279R9I1w9cg"/>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_T69zR0nXEfC279R9I1w9cg" name="advice_type" ordered="false" lowerBound="1" upperBound="3" eType="_T69zS0nXEfC279R9I1w9cg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_T69zSUnXEfC279R9I1w9cg" name="advice_behaviour" ordered="false" lowerBound="1" eType="_T69zI0nXEfC279R9I1w9cg"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EEnum" xmi:id="_T69zS0nXEfC279R9I1w9cg" name="Advice_Type">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T69zTEnXEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_2ae4IEnTEfC279R9I1w9cg"/>
+        <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_T69zTUnXEfC279R9I1w9cg" name="Before"/>
+        <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_T69zTknXEfC279R9I1w9cg" name="Around" value="1"/>
+        <eLiterals xmi:type="ecore:EEnumLiteral" xmi:id="_T69zT0nXEfC279R9I1w9cg" name="After" value="2"/>
+      </eClassifiers>
+      <eSubpackages xmi:type="ecore:EPackage" xmi:id="_T69zUEnXEfC279R9I1w9cg" name="AspectMisusecaseProfile" nsURI="http:///aspectmitigation/AspectMisusecaseProfile.ecore" nsPrefix="aspectmitigation.AspectMisusecaseProfile">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T69zUUnXEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/4.0.0/UML"/>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_T69zUknXEfC279R9I1w9cg" name="Aspect_Misusecase_Description">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T69zU0nXEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_smcq4EnWEfC279R9I1w9cg"/>
+          <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_T69zVEnXEfC279R9I1w9cg" name="base_AspectMisusecase" ordered="false" eType="_T69zVknXEfC279R9I1w9cg"/>
+        </eClassifiers>
+        <eClassifiers xmi:type="ecore:EClass" xmi:id="_T69zVknXEfC279R9I1w9cg" name="AspectMisusecase">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T69zV0nXEfC279R9I1w9cg" source="http://www.eclipse.org/uml2/2.0.0/UML"/>
+        </eClassifiers>
+      </eSubpackages>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_K8hG4EnWEfC279R9I1w9cg" alias="UseCase">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_MyzTEEnWEfC279R9I1w9cg" alias="Dependency">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+  </elementImport>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_CKWOAEnTEfC279R9I1w9cg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_CKWOAUnTEfC279R9I1w9cg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_EqZv8EnTEfC279R9I1w9cg" name="AspectMitigationcase">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_OomXEknWEfC279R9I1w9cg" name="base_UseCase" association="_OomXEEnWEfC279R9I1w9cg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OomXE0nWEfC279R9I1w9cg"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_lEk8QEnTEfC279R9I1w9cg" name="Mitigates">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_PfuzYknWEfC279R9I1w9cg" name="base_Dependency" association="_PfuzYEnWEfC279R9I1w9cg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PfuzY0nWEfC279R9I1w9cg"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_rfhmcEnTEfC279R9I1w9cg" memberEnd="_rfhmc0nTEfC279R9I1w9cg _rfhmdEnTEfC279R9I1w9cg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rfhmcUnTEfC279R9I1w9cg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rfhmcknTEfC279R9I1w9cg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_rfhmc0nTEfC279R9I1w9cg" name="mitigates" visibility="private" type="_lEk8QEnTEfC279R9I1w9cg" association="_rfhmcEnTEfC279R9I1w9cg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_rfhmdEnTEfC279R9I1w9cg" name="aspectMitigation" visibility="private" type="_EqZv8EnTEfC279R9I1w9cg" association="_rfhmcEnTEfC279R9I1w9cg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_wf_2sEnTEfC279R9I1w9cg" name="AspectMitigation_Description">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_GrtD4EnUEfC279R9I1w9cg" name="mitigation_name" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_IlXUMEnUEfC279R9I1w9cg" name="precondition" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8JqMAEnUEfC279R9I1w9cg" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_JnTSUEnUEfC279R9I1w9cg" name="basicmitigationFlow" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9uNH8EnUEfC279R9I1w9cg" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Lb6DgEnUEfC279R9I1w9cg" name="postcondition" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__uSwYEnUEfC279R9I1w9cg" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_HM2ywkuNEfC279R9I1w9cg" name="base_UseCase" association="_HM2ywEuNEfC279R9I1w9cg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HM2yw0uNEfC279R9I1w9cg"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_yx0IUEnTEfC279R9I1w9cg" name="Pointcut">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9pbLEEnTEfC279R9I1w9cg" name="pointcut_name" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-zcHIEnTEfC279R9I1w9cg" name="pointcut_element" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__qo04EnTEfC279R9I1w9cg" name="selection_constraint" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_0K-6sEnTEfC279R9I1w9cg" name="Joinpoint">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Ci40YEnUEfC279R9I1w9cg" name="selected_joinpoints" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_EDSQIEnUEfC279R9I1w9cg" name="source" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_05oJYEnTEfC279R9I1w9cg" name="Advice">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_A--KkEnUEfC279R9I1w9cg" name="advice_type" visibility="private" type="_2ae4IEnTEfC279R9I1w9cg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oPtmEEnUEfC279R9I1w9cg" value="3"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_B1-EAEnUEfC279R9I1w9cg" name="advice_behaviour" visibility="private" type="_EqZv8EnTEfC279R9I1w9cg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_2ae4IEnTEfC279R9I1w9cg" name="Advice_Type">
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_3mZRoEnTEfC279R9I1w9cg" name="Before"/>
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_4KHCsEnTEfC279R9I1w9cg" name="Around"/>
+    <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_5Cwh8EnTEfC279R9I1w9cg" name="After"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_N66nIEnVEfC279R9I1w9cg" memberEnd="_N66nI0nVEfC279R9I1w9cg _N66nJEnVEfC279R9I1w9cg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_N66nIUnVEfC279R9I1w9cg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_N66nIknVEfC279R9I1w9cg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_N66nI0nVEfC279R9I1w9cg" name="aspectMitigation" visibility="private" type="_EqZv8EnTEfC279R9I1w9cg" association="_N66nIEnVEfC279R9I1w9cg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_N66nJEnVEfC279R9I1w9cg" name="pointcut" visibility="private" type="_yx0IUEnTEfC279R9I1w9cg" aggregation="composite" association="_N66nIEnVEfC279R9I1w9cg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CwsU8UnWEfC279R9I1w9cg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ThfOEEnVEfC279R9I1w9cg" name="applies" memberEnd="_ThfOE0nVEfC279R9I1w9cg _ThfOFEnVEfC279R9I1w9cg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ThfOEUnVEfC279R9I1w9cg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ThfOEknVEfC279R9I1w9cg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ThfOE0nVEfC279R9I1w9cg" name="advice" visibility="private" type="_05oJYEnTEfC279R9I1w9cg" aggregation="composite" association="_ThfOEEnVEfC279R9I1w9cg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bMLW8EnXEfC279R9I1w9cg" value="3"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ThfOFEnVEfC279R9I1w9cg" name="pointcut" visibility="private" type="_yx0IUEnTEfC279R9I1w9cg" association="_ThfOEEnVEfC279R9I1w9cg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_gEFzAEnVEfC279R9I1w9cg" name="selects" memberEnd="_gEFzA0nVEfC279R9I1w9cg _gEFzBEnVEfC279R9I1w9cg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gEFzAUnVEfC279R9I1w9cg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gEFzAknVEfC279R9I1w9cg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_gEFzA0nVEfC279R9I1w9cg" name="joinpoint" visibility="private" type="_0K-6sEnTEfC279R9I1w9cg" aggregation="composite" association="_gEFzAEnVEfC279R9I1w9cg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_h7JbQEnVEfC279R9I1w9cg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_gEFzBEnVEfC279R9I1w9cg" name="pointcut" visibility="private" type="_yx0IUEnTEfC279R9I1w9cg" association="_gEFzAEnVEfC279R9I1w9cg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_umoPYEnVEfC279R9I1w9cg" memberEnd="_umpdgknVEfC279R9I1w9cg _umrSsEnVEfC279R9I1w9cg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_umpdgEnVEfC279R9I1w9cg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_umpdgUnVEfC279R9I1w9cg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_umpdgknVEfC279R9I1w9cg" name="description" visibility="private" type="_wf_2sEnTEfC279R9I1w9cg" aggregation="composite" association="_umoPYEnVEfC279R9I1w9cg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_umrSsEnVEfC279R9I1w9cg" name="aspectMitigation" visibility="private" type="_EqZv8EnTEfC279R9I1w9cg" association="_umoPYEnVEfC279R9I1w9cg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_OomXEEnWEfC279R9I1w9cg" name="E_AspectMitigationcase_UseCase19" memberEnd="_OomXEUnWEfC279R9I1w9cg _OomXEknWEfC279R9I1w9cg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_OomXEUnWEfC279R9I1w9cg" name="extension_AspectMitigationcase" type="_EqZv8EnTEfC279R9I1w9cg" aggregation="composite" association="_OomXEEnWEfC279R9I1w9cg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_PfuzYEnWEfC279R9I1w9cg" name="E_Mitigates_Dependency20" memberEnd="_PfuzYUnWEfC279R9I1w9cg _PfuzYknWEfC279R9I1w9cg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_PfuzYUnWEfC279R9I1w9cg" name="extension_Mitigates" type="_lEk8QEnTEfC279R9I1w9cg" aggregation="composite" association="_PfuzYEnWEfC279R9I1w9cg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_smcq4EnWEfC279R9I1w9cg" name="Aspect_Misusecase_Description">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_0mA3oEuFEfC279R9I1w9cg" name="aspectmuc_name" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_7cxUEEuFEfC279R9I1w9cg" name="precondition" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qmtHIEuLEfC279R9I1w9cg" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8ZmvwEuFEfC279R9I1w9cg" name="basicthreatFlow" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_stqMkEuLEfC279R9I1w9cg" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9mbIMEuFEfC279R9I1w9cg" name="postcondition" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uh3VIEuLEfC279R9I1w9cg" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BRr00kuNEfC279R9I1w9cg" name="base_UseCase" association="_BRr00EuNEfC279R9I1w9cg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BRr000uNEfC279R9I1w9cg"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_FQaUMEuNEfC279R9I1w9cg" name="base_UseCase" association="_FQWCwEuNEfC279R9I1w9cg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FQaUMUuNEfC279R9I1w9cg"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_qqwrQEuMEfC279R9I1w9cg" visibility="private" memberEnd="_qqwrQ0uMEfC279R9I1w9cg _qqwrREuMEfC279R9I1w9cg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qqwrQUuMEfC279R9I1w9cg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qqwrQkuMEfC279R9I1w9cg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_qqwrQ0uMEfC279R9I1w9cg" name="misusecase" visibility="private" type="_smcq4EnWEfC279R9I1w9cg" association="_qqwrQEuMEfC279R9I1w9cg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tLp6sEuMEfC279R9I1w9cg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_qqwrREuMEfC279R9I1w9cg" name="mitigates" visibility="private" type="_lEk8QEnTEfC279R9I1w9cg" association="_qqwrQEuMEfC279R9I1w9cg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_BRr00EuNEfC279R9I1w9cg" name="E_Aspect_Misusecase_Description_UseCase22" memberEnd="_BRr00UuNEfC279R9I1w9cg _BRr00kuNEfC279R9I1w9cg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_BRr00UuNEfC279R9I1w9cg" name="extension_Aspect_Misusecase_Description" type="_smcq4EnWEfC279R9I1w9cg" aggregation="composite" association="_BRr00EuNEfC279R9I1w9cg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_FQWCwEuNEfC279R9I1w9cg" name="E_Aspect_Misusecase_Description_UseCase23" memberEnd="_FQWCwUuNEfC279R9I1w9cg _FQaUMEuNEfC279R9I1w9cg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_FQWCwUuNEfC279R9I1w9cg" name="extension_Aspect_Misusecase_Description" type="_smcq4EnWEfC279R9I1w9cg" aggregation="composite" association="_FQWCwEuNEfC279R9I1w9cg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_HM2ywEuNEfC279R9I1w9cg" name="E_AspectMitigation_Description_UseCase1" memberEnd="_HM2ywUuNEfC279R9I1w9cg _HM2ywkuNEfC279R9I1w9cg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_HM2ywUuNEfC279R9I1w9cg" name="extension_AspectMitigation_Description" type="_wf_2sEnTEfC279R9I1w9cg" aggregation="composite" association="_HM2ywEuNEfC279R9I1w9cg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_181p8EwwEfC279R9I1w9cg" name="Usecase"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_8H0lgEwwEfC279R9I1w9cg" name="inlcude" visibility="private" memberEnd="_8H3BwEwwEfC279R9I1w9cg _8H3BwUwwEfC279R9I1w9cg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8H0lgUwwEfC279R9I1w9cg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8H0lgkwwEfC279R9I1w9cg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_8H3BwEwwEfC279R9I1w9cg" name="aspectMitigation" visibility="private" type="_EqZv8EnTEfC279R9I1w9cg" association="_8H0lgEwwEfC279R9I1w9cg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OlaiMEwxEfC279R9I1w9cg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_8H3BwUwwEfC279R9I1w9cg" name="usecase" visibility="private" type="_181p8EwwEfC279R9I1w9cg" association="_8H0lgEwwEfC279R9I1w9cg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_637OcEwxEfC279R9I1w9cg" name="AspectMisusecase">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Jj6hwUwyEfC279R9I1w9cg" name="base_UseCase" association="_Jj4FgEwyEfC279R9I1w9cg">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#UseCase"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Jj6hwkwyEfC279R9I1w9cg"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_9H3QwEwxEfC279R9I1w9cg" memberEnd="_9H330kwxEfC279R9I1w9cg _9H5F8EwxEfC279R9I1w9cg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9H330EwxEfC279R9I1w9cg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9H330UwxEfC279R9I1w9cg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_9H330kwxEfC279R9I1w9cg" name="aspectmisusecase" visibility="private" type="_637OcEwxEfC279R9I1w9cg" association="_9H3QwEwxEfC279R9I1w9cg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_9H5F8EwxEfC279R9I1w9cg" name="description" visibility="private" type="_smcq4EnWEfC279R9I1w9cg" aggregation="composite" association="_9H3QwEwxEfC279R9I1w9cg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_Jj4FgEwyEfC279R9I1w9cg" name="E_AspectMisusecase_UseCase29" memberEnd="_Jj6hwEwyEfC279R9I1w9cg _Jj6hwUwyEfC279R9I1w9cg">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_Jj6hwEwyEfC279R9I1w9cg" name="extension_AspectMisusecase" type="_637OcEwxEfC279R9I1w9cg" aggregation="composite" association="_Jj4FgEwyEfC279R9I1w9cg"/>
+  </packagedElement>
+</uml:Profile>
