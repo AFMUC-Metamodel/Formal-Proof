@@ -5,7 +5,7 @@ Require Import Arith.
 Open Scope string_scope.
 Require Import Coq.Strings.String.
 Require Import Coq.Bool.Bool.
-Load "C:\Users\shumaila.iqbal\OneDrive - Riphah International University\Documents\Ph.D research work\3. PhD dissertation\2. Metamodel\AFMUC_mitigation_definition.v".
+Load "AFMUC_mitigation_definition.v".
 
 (*******************Helper function proof*******************)
 Lemma get_misusecase_attribute_correct: 
