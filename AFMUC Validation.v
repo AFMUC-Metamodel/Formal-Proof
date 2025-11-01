@@ -5,8 +5,8 @@ Require Import Arith.
 Open Scope string_scope.
 Require Import Coq.Strings.String.
 Require Import Coq.Bool.Bool.
-Load "C:\Users\shumaila.iqbal\OneDrive - Riphah International University\Documents\Ph.D research work\3. PhD dissertation\2. Metamodel\AFMUC_Definitions.v".
-Load "C:\Users\shumaila.iqbal\OneDrive - Riphah International University\Documents\Ph.D research work\3. PhD dissertation\2. Metamodel\AFMUC_Instances.v".
+(*Load "reference location of AFMUC_Definitions.v".*)
+(*Load "reference location of AFMUC_Instances.v".*)
 
 
 
