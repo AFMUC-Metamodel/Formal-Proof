@@ -5,8 +5,8 @@ Require Import Arith.
 Open Scope string_scope.
 Require Import Coq.Strings.String.
 Require Import Coq.Bool.Bool.
-(*Load "reference location of AFMUC_Definitions.v".*)
-(*Load "reference location of AFMUC_Instances.v".*)
+Load "AFMUC_Definitions.v".
+Load "AFMUC_Instances.v".
 
 
 
