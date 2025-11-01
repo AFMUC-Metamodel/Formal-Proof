@@ -5,7 +5,7 @@ Require Import Arith.
 Open Scope string_scope.
 Require Import Coq.Strings.String. 
 Require Import Coq.Bool.Bool. 
-Load "C:\Users\shumaila.iqbal\OneDrive - Riphah International University\Documents\Ph.D research work\3. PhD dissertation\2. Metamodel\AFMUC-mitigation_weaving_Def.v".
+(*Load "reference location of AFMUC-mitigation_weaving_Def.v".*)
 (* Lemma: weaving correctness *)
 Lemma weaving_correct :
   forall (pc : Pointcut) (muc : AspectMisUsecaseModule.Threat) (aspect : AspectMitigationModule.Mitigation),
