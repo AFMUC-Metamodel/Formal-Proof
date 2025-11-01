@@ -11,7 +11,7 @@ Open Scope string_scope.
   value : string
 }.*)
 
-Load "C:\Users\shumaila.iqbal\OneDrive - Riphah International University\Documents\Ph.D research work\3. PhD dissertation\2. Metamodel\AFMUC_mitigation_definition.v". 
+Load "AFMUC_mitigation_definition.v". 
 
 (*/////////////////////////DEFINITION OF STRING LISTS DATA SECTION 3/////////////////////////*)
 
