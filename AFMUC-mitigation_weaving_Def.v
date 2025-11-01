@@ -5,9 +5,9 @@ Require Import Arith.
 Open Scope string_scope.
 Require Import Coq.Strings.String.
 Require Import Coq.Bool.Bool.
-(*Load "reference location of AFMUC_mitigation_definition.v".*)
-(*Load "reference location of AFMUC_mitigation_instances.v".*)
-(*Load " reference location of AFMUC_Verification.v".*)
+Load "AFMUC_mitigation_definition.v".
+Load "AFMUC_mitigation_instances.v".
+Load "AFMUC_Verification.v".
 (******************)
 Record WovenAFMUC : Set := {
   aspect_mitigation_name : string;
