@@ -10,9 +10,7 @@ Open Scope string_scope.
   seq_num : nat;
   value : string
 }.*)
-(*
-Load "C:\Users\shumaila.iqbal\OneDrive - Riphah International University\Documents\Ph.D research work\3. PhD dissertation\2. Metamodel\AFMUC_Definitions.v".
-*)
+  (*Load "reference location of AFMUC_Definitions.v".*)
                                (*/////////////Use case \\\\\\\\\\\\\\\\\\*)
 
 (*/////////////////////////DEFINITION OF STRING LISTS DATA (USECASES) /////////////////////////*)
