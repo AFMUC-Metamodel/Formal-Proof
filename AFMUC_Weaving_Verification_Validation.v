@@ -5,8 +5,8 @@ Require Import Arith.
 Open Scope string_scope.
 Require Import Coq.Strings.String. 
 Require Import Coq.Bool.Bool. 
-Load "C:\Users\shumaila.iqbal\OneDrive - Riphah International University\Documents\Ph.D research work\3. PhD dissertation\2. Metamodel\AFMUC_weaving_Definition.v".
-Load "C:\Users\shumaila.iqbal\OneDrive - Riphah International University\Documents\Ph.D research work\3. PhD dissertation\2. Metamodel\AFMUC_Instances.v".
+Load "AFMUC_weaving_Definition.v".
+Load "AFMUC_Instances.v".
 (* Lemma: weaving correctness *)
 Lemma weaving_correct :
   forall (pc : Pointcut) (uc : UsecaseModule.Usecase) (aspect : AspectMisUsecaseModule.Threat),
