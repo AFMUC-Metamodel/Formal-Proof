@@ -5,9 +5,9 @@ Require Import Arith.
 Open Scope string_scope.
 Require Import Coq.Strings.String.
 Require Import Coq.Bool.Bool.
-Load "C:\Users\shumaila.iqbal\OneDrive - Riphah International University\Documents\Ph.D research work\3. PhD dissertation\2. Metamodel\AFMUC_Definitions.v".
-Load "C:\Users\shumaila.iqbal\OneDrive - Riphah International University\Documents\Ph.D research work\3. PhD dissertation\2. Metamodel\AFMUC_Instances.v".
-(*Load "C:\Users\shumaila.iqbal\OneDrive - Riphah International University\Documents\Ph.D research work\3. PhD dissertation\2. Metamodel\AFMUC_Verification.v".*)
+Load "AFMUC_Definitions.v".
+Load "AFMUC_Instances.v".
+Load "AFMUC_Verification.v".
 (******************)
 Record WovenAFMUC : Set := {
   aspect_misusecase_name : string;
