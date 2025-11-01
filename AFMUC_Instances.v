@@ -10,7 +10,7 @@ Open Scope string_scope.
   seq_num : nat;
   value : string
 }.*)
-  (*Load "reference location of AFMUC_Definitions.v".*)
+Load "AFMUC_Definitions.v".*
                                (*/////////////Use case \\\\\\\\\\\\\\\\\\*)
 
 (*/////////////////////////DEFINITION OF STRING LISTS DATA (USECASES) /////////////////////////*)
