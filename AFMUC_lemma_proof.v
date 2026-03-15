@@ -1,3 +1,48 @@
+(*
+=============================================================
+AFMUC Misuse Case Metamodel – Lemmas and Proofs
+=============================================================
+This file contains the formal lemmas and proofs for the
+Aspect-Oriented Feature Misuse Case (AFMUC) metamodel.
+-------------------------------------------------------------
+Project Files
+-------------------------------------------------------------
+The project contains the following Coq files:
+1. AFMUC_Definitions.v
+      Contains the formal definitions of the AFMUC metamodel.
+2. AFMUC_Instances.v
+      Contains the EU-RentCar threat model instances.
+3. AFMUC_Lemmas.v
+      Contains the lemmas and proofs for the AFMUC metamodel.
+-------------------------------------------------------------
+Instructions to Run the Code
+-------------------------------------------------------------
+Step 1: Clone or download the repository from GitHub.
+Step 2: Place all project files in the same folder
+        OR keep the original folder structure unchanged.
+Step 3: Open the project in CoqIDE.
+Step 4: Compile the files in the following order:
+        1. AFMUC_Definitions.v
+        2. AFMUC_Instances.v
+        3. AFMUC_Lemmas.v
+Step 5: After compiling the dependency files,
+        open AFMUC_Lemmas.v and run the script.
+-------------------------------------------------------------
+Important Notes
+-------------------------------------------------------------
+• The following modules are imported using Require Import.
+• The files AFMUC_Definitions.v and AFMUC_Instances.v
+  must be compiled before compiling this file.
+• Do not rename or move the files unless you update
+  the import paths accordingly.
+-------------------------------------------------------------
+Example Imports Used in This File
+-------------------------------------------------------------
+Require Import AFMUC_Definitions.
+Require Import AFMUC_Instances.
+=============================================================
+*)
+
 Require Import String. 
 Require Import List. 
 Import ListNotations.
@@ -5,8 +50,8 @@ Require Import Arith.
 Open Scope string_scope.
 Require Import Coq.Strings.String.
 Require Import Coq.Bool.Bool.
-Load "AFMUC_Definitions.v".
-Load "AFMUC_Instances.v".
+Require Import AFMUC_misusecase_Definitions.
+Require Import AFMUC_threat_Instances.v.
 
 (*******************Helper function proof*******************)
 Lemma get_usecase_attribute_correct: 
