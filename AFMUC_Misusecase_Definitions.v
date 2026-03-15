@@ -1,3 +1,6 @@
+(*It describe all classes, their attributes and functions that are used to represent the AFMUC Metamodel*)
+(* the reference location of definition file must be added to the other files 
+
 (* Import necessary libraries *)  
 Require Import String.
 Require Import List. 
