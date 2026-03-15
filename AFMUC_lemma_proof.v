@@ -22,9 +22,9 @@ Step 2: Place all project files in the same folder
         OR keep the original folder structure unchanged.
 Step 3: Open the project in CoqIDE.
 Step 4: Compile the files in the following order:
-        1. AFMUC_Definitions.v
-        2. AFMUC_Instances.v
-        3. AFMUC_Lemmas.v
+        1. AFMUC_Misusecase_Definitions.v
+        2. AFMUC_threat_Instances.v
+        3. AFMUC_Lemma_proof.v
 Step 5: After compiling the dependency files,
         open AFMUC_Lemmas.v and run the script.
 -------------------------------------------------------------
