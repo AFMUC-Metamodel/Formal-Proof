@@ -1,16 +1,32 @@
-(*Instance of EU- RENT a car use cases*)   
-(* Import necessary libraries *)   
+(*
+=======================================================================================================================================
+AFMUC Metamodel – EU-RentCar Case Study Instances
+=======================================================================================================================================
+This file contains the EU-RentCar case study threat instances used to instantiate and evaluate the Aspect-Oriented Feature Misuse Case
+(AFMUC) metamodel.The instances include:
+. Functional Use Case instances of the EU-RentCar system
+. Aspect Misuse Case (security threat) instances
+. Pointcut instances identifying join points in use case elements
+. Joinpoint instances created by applying pointcuts to use cases
+. Advice instances weaving security threats into join points
+. Introduction instances for modifying or associating threatswith existing use cases.
+Compilation Instructions
+Step 1: Place the following files in the same project folder:
+      AFMUC_Definitions.v
+      AFMUC_Instances.v
+      AFMUC_Lemma_proof.v   
+Step 2:Open the project folder in CoqIDE.
+Step 3: Compile the files in the following order:
+      1. AFMUC_Definitions.v
+      2. AFMUC_Threat_Instances.v
+Step 4:After compilation, the EU-RentCar instances will be available for use in verification scripts or lemma proofs.
+=====================================================================================================================================  
 Require Import String.
 Require Import List.
 Import ListNotations.
 Require Import Arith. 
 Open Scope string_scope. 
-(* Define a pair structure with a sequence number and a string *)
-(*Record SeqString := {
-  seq_num : nat;
-  value : string
-}.*)
-Load "AFMUC_Definitions.v".*
+Require Import AFMUC_Misusecase_Definitions.
                                (*/////////////Use case \\\\\\\\\\\\\\\\\\*)
 
 (*/////////////////////////DEFINITION OF STRING LISTS DATA (USECASES) /////////////////////////*)
