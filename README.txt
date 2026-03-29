@@ -1,6 +1,6 @@
 **********************************************************************************************************************************************************
-**					AFMUC- Aspect-oriented MisUse Case Metamodel									**
-**					     Formal Verification and Validation										**
+				AFMUC- Aspect-oriented MisUse Case Metamodel								
+					     Formal Verification and Validation									
 **********************************************************************************************************************************************************
 This repository implements the AFMUC Metamodel in Coq IDE version 8.18. It includes class definitions, instances, lemma verification, weaving algorithms, and validation results.
 The COQ code files (.v) Dependency Structure are as follows
@@ -14,20 +14,20 @@ The COQ code files (.v) Dependency Structure are as follows
 		    │   └── depends on → AFMUC_Threat_Definition.v
 		    └── depends on → AFMUC_Threat_Instances.v
 
-File/Folder		Name			Description							Dependencies
+File/Folder		Name					Description															Dependencies
 
-code File	AFMUC_Threat_Definition.v	Core metamodel: classes, attributes, and association functions	None
+code File	AFMUC_Threat_Definition.v	Core metamodel: classes, attributes, and association functions		None
 
-code File	AFMUC_Threat_Instances.v	Case study instances: use cases, misuse cases, aspects		None 
+code File	AFMUC_Threat_Instances.v	Case study instances: use cases, misuse cases, aspects				None 
 
-code File	AFMUC_Lemma_Verification.v	Lemma proofs and generates verification results			Load AFMUC_Threat_Definition.v 																	Load AFMUC_Threat_Instances.v 
+code File	AFMUC_Lemma_Verification.v	Lemma proofs and generates verification results						Load AFMUC_Threat_Definition.v 																																			Load AFMUC_Threat_Instances.v 
 
-code File	AFMUC_weaving_algorithm.v	Weaving algorithm definition					Load AFMUC_Threat_Definition.v 
+code File	AFMUC_weaving_algorithm.v	Weaving algorithm definition										Load AFMUC_Threat_Definition.v 
 
-code File	AFMUC_Threat_Validation.v	Final woven model for validation of metamodel			Load AFMUC_weaving_algorithm.v
-														Load AFMUC_Threat_Instances.v, 				
-Folder		threat verification results/	Generated verification results					Output of AFMUC_Lemma_Verification.v
-Folder		threat validation results/	Generated validation results					Output of AFMUC_Threat_Validation.v
+code File	AFMUC_Threat_Validation.v	Final woven model for validation of metamodel						Load AFMUC_weaving_algorithm.v
+																											Load AFMUC_Threat_Instances.v, 				
+Folder		threat verification results/	Generated verification results									Output of AFMUC_Lemma_Verification.v
+Folder		threat validation results/	Generated validation results										Output of AFMUC_Threat_Validation.v
 
 To execute any file in this project, its dependency file(s) must be referenced at the beginning of the code, typically after the library import statements. This ensures that all required definitions, instances, and functions are available before the main code is executed.
 
