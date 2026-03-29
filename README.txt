@@ -1,6 +1,6 @@
 **********************************************************************************************************************************************************
-**					AFMUC- Aspect-oriented Mitigation case Metamodel								**
-**					     Formal Verification and Validation										**
+				AFMUC- Aspect-oriented Mitigation case Metamodel							
+					     Formal Verification and Validation										
 **********************************************************************************************************************************************************
 This repository implements the AFMUC Metamodel in Coq IDE version 8.18. It includes class definitions, instances, lemma verification, weaving algorithms, and validation results.
 The COQ code files (.v) Dependency Structure are as follows
@@ -14,19 +14,19 @@ The COQ code files (.v) Dependency Structure are as follows
 		    │   └── depends on → AFMUC_mitigation_definition.v
 		    └── depends on → AFMUC_mitigation_instances.v
 
-File/Folder		Name				Description							Dependencies
+File/Folder		Name								Description														Dependencies
 
 code File	AFMUC_mitigation_definition.v		Core metamodel: classes, attributes, and association functions	None
 
 code File	AFMUC_mitigation_instances.v		Case study instances: misuse cases, mitigation cases, aspects	None 
 
-code File	AFMUC_mitigation_lemma_verification.v	Lemma proofs and it generates verification results		Load AFMUC_mitigation_definition.v 																Load AFMUC_mitigation_instances.v 
+code File	AFMUC_mitigation_lemma_verification.v	Lemma proofs and it generates verification results			Load AFMUC_mitigation_definition.v 																																		Load AFMUC_mitigation_instances.v 
 
-code File	AFMUC_mitigation_weaving_algorithm.v	Weaving algorithm definitions					Load AFMUC_mitigation_definition.v
+code File	AFMUC_mitigation_weaving_algorithm.v	Weaving algorithm definitions								Load AFMUC_mitigation_definition.v
 
-code File	AFMUC_mitigation_validation.v		Final validation results using instances and weaving	  Load AFMUC_mitigation_weaving_algorithm.v 																Load AFMUC_mitigation_instances.v, 															
-Folder		threat verification results/		Generated verification results			Output of AFMUC_mitigation_lemma_verification.v
-Folder		threat validation results/		Generated validation results			Output of AFMUC_mitigation_validation.v
+code File	AFMUC_mitigation_validation.v		Final validation results using instances and weaving	 		 Load AFMUC_mitigation_weaving_algorithm.v 																																Load AFMUC_mitigation_instances.v, 															
+Folder		threat verification results/		Generated verification results								Output of AFMUC_mitigation_lemma_verification.v
+Folder		threat validation results/		Generated validation results								Output of AFMUC_mitigation_validation.v
 
 To execute any file in this project, its dependency file(s) must be referenced at the beginning of the code, typically after the library import statements. This ensures that all required definitions, instances, and functions are available before the main code is executed.
 
